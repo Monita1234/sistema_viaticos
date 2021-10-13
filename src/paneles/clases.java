@@ -10,8 +10,6 @@ import Modelo.Cuenta;
 
 import java.awt.Container;
 import java.util.ArrayList;
-import java.util.List;
-import javafx.scene.control.ComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 /**

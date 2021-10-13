@@ -4,22 +4,17 @@
  * and open the template in the editor.
  */
 package paneles;
+
 import Controlador.CtrlClases1;
 import Modelo.ConsultaCuenta;
 import Modelo.Cuenta;
 import Modelo.User;
-
-import java.awt.Container;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.scene.control.ComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
-import principal.diaEditUsuario;
-import principal.diaRegUsuarios;
-import principal.Principal;
 /**
  *
  * @author Gerencia Proyectos

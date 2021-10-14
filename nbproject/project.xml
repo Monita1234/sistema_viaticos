@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>Sistema viaticos</name>
+            <name>Dashboard_1</name>
             <explicit-platform explicit-source-supported="true"/>
             <source-roots>
                 <root id="src.dir"/>
@@ -14,7 +14,7 @@
         </data>
         <data xmlns="http://www.netbeans.org/ns/jmx/1" version="0.4"/>
         <libraries xmlns="http://www.netbeans.org/ns/ant-project-libraries/1">
-            <definitions>/home/bruno/Escritorio/sistema_viaticos/lib/nblibraries.properties</definitions>
+            <definitions>./lib/nblibraries.properties</definitions>
         </libraries>
     </configuration>
 </project>

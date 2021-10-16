@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'SistemaViaticos.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree('lib')
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'com.toedter:jcalendar:1.4'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.4'
+    implementation 'org.apache.poi:poi:3.16'
+    implementation 'org.netbeans.external:AbsoluteLayout:RELEASE125'
+    implementation 'org.jumpmind.symmetric:symmetric-csv:3.5.19'
+    testImplementation 'junit:junit:4.13'
+}

@@ -34,7 +34,7 @@ public class Caja_menor extends javax.swing.JPanel {
     RegistrosTabla registrosTabla = RegistrosTabla.getRegistrosTabla();
     SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     JTable tablaclases2 = new JTable();
-    
+
     private void initComponents2() {
         tablaclases2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tablaclases2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -54,11 +54,11 @@ public class Caja_menor extends javax.swing.JPanel {
             }
         });
     }
-    
+
     public Caja_menor(String nombre, String id_usuario, String cargo) {
         initComponents();
         initComponents2();
-        
+
         lblUsuario.setText(nombre.toUpperCase());
         txtId.setText(id_usuario);
         txtId.setVisible(false);
@@ -1138,20 +1138,23 @@ public class Caja_menor extends javax.swing.JPanel {
     }//GEN-LAST:event_seleccionarreportes1ActionPerformed
 
     private void buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar1ActionPerformed
-        // TODO add your handling code here:
-         if (fechaInicial1.getDate() == null) {
+
+        if (fechaInicial2.getDate() == null) {
             JOptionPane.showMessageDialog(null, "Ingrese una fecha inicial.");
+            return;
         }
-        if (fechaFinal.getDate() == null) {
+
+        if (fechaFinal1.getDate() == null) {
             JOptionPane.showMessageDialog(null, "Ingrese una fecha final.");
-        }/*else if(tipo.getIdTipoDoc().equals("0")){
-            JOptionPane.showMessageDialog(null, "Seleccione un tipo de reporte");
-        }*/ else {
-
-            //                ctrl.consultarreportecaja_menor(this, 1);
-            ctrl.consultarreportecaja_menor(this);
-
+            return;
         }
+
+        if (seleccionarreportes1.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "Seleccione un tipo de reporte");
+            return;
+        }
+
+        ctrl.consultarreportecaja_menor(this);
     }//GEN-LAST:event_buscar1ActionPerformed
 
     private void limpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar1ActionPerformed
@@ -1161,7 +1164,7 @@ public class Caja_menor extends javax.swing.JPanel {
 
     private void exportar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportar1ActionPerformed
         // TODO add your handling code here:
-          archivo = selecArchivo.getSelectedFile();
+        archivo = selecArchivo.getSelectedFile();
         archivo = new File(archivo.toString() + ".csv");
         ctrl.caja_menorreportes(this, archivo);
     }//GEN-LAST:event_exportar1ActionPerformed
